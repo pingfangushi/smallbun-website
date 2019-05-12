@@ -1,7 +1,11 @@
+# 如果您只想让圆圈在直接提交中运行，您可以取消注释
+# 并取消注释过滤器：* filter-only-master也在下面
+#
 aliases:
-  branches:
-    only:
-      - master
+  - &filter-only-master
+    branches:
+      only:
+        - master
 
 
 version: 2
@@ -23,9 +27,11 @@ jobs:
             echo "machine github.com login 2504919830@qq.com password $GITHUB_TOKEN" > ~/.netrc
             cd website && yarn install && GIT_USER=2504919830@qq.com yarn run publish-gh-pages
 
+
 workflows:
   version: 2
   build_and_deploy:
     jobs:
+
       - deploy-website:
-#         filters: *filter-only-master
+          filters: *filter--master
