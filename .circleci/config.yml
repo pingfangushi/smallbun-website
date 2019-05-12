@@ -23,7 +23,7 @@ jobs:
           name: 部署到GitHub页面
           command: |
             git config --global user.email "2504919830@qq.com"
-            git config --global user.name "pingfangushi"
+            git config --global user.name "SanLi"
             echo "machine github.com login pingfangushi password $GITHUB_TOKEN" > ~/.netrc
             cd website && yarn install && GIT_USER=pingfangushi yarn run publish-gh-pages
 
@@ -32,6 +32,12 @@ workflows:
   version: 2
   build_and_deploy:
     jobs:
-
+      build:
+        machine: true
+        branches:
+          ignore: gh-pages
+        steps:
+          - run: echo "Skipping tests on gh-pages branch"
       - deploy-website:
           filters: *filter-only-master
+
