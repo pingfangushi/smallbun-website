@@ -28,14 +28,14 @@ const siteConfig = {
     },
     title: 'SmallBun', // 您网站的标题
     tagline: '企业级应用程序开发脚手架',
-    url: 'http://pingfangushi.github.io', // 网站网址
-    baseUrl: '/smallbun-website/', // 项目的基本URL */
+    url: 'http://smallbun.pingfangushi.com', // 网站网址
+    baseUrl: '/', // 项目的基本URL */
     editUrl: 'https://github.com/pingfangushi/smallbun-site/edit/master/docs/',
 
     // 用于发布等
     projectName: 'smallbun-website',
     organizationName: 'pingfangushi',
-    cname: 'pingfangushi.com',
+    cname: 'smallbun.pingfangushi.com',
 
 
     // 对于顶部导航栏中没有标题链接 - > headerLinks：[]，
