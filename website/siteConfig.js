@@ -30,7 +30,7 @@ const siteConfig = {
     tagline: '企业级应用程序开发脚手架',
     url: 'http://smallbun.pingfangushi.com', // 网站网址
     baseUrl: '/', // 项目的基本URL */
-    editUrl: 'https://github.com/pingfangushi/smallbun-site/edit/master/docs/',
+    editUrl: 'https://github.com/pingfangushi/smallbun-website/edit/master/docs/',
 
     // 用于发布等
     projectName: 'smallbun-website',
