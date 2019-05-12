@@ -8,6 +8,8 @@ aliases:
         - master
 
 
+
+
 version: 2
 jobs:
   deploy-website:
@@ -26,6 +28,13 @@ jobs:
             git config --global user.name "SanLi"
             echo "machine github.com login pingfangsuhi  password $GITHUB_TOKEN" > ~/.netrc
             cd website && yarn install && GIT_USER=pingfangsuhi yarn run publish-gh-pages
+  build:
+    machine: true
+    branches:
+      ignore: gh-pages
+    steps:
+      - run: echo "Skipping tests on gh-pages branch"
+
 
 
 workflows:
@@ -35,10 +44,3 @@ workflows:
 
       - deploy-website:
           filters: *filter-only-master
-  jobs:
-    build:
-      machine: true
-      branches:
-        ignore: gh-pages
-      steps:
-        - run: echo "Skipping tests on gh-pages branch"
