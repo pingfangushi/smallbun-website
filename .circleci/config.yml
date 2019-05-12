@@ -24,7 +24,7 @@ jobs:
           command: |
             git config --global user.email "2504919830@qq.com"
             git config --global user.name "smallbun-website-circleci"
-            echo "machine github.com login smallbun-website-circleci password $GITHUB_TOKEN" > ~/.netrc
+            echo "machine github.com login  password $GITHUB_TOKEN" > ~/.netrc
             cd website && yarn install && GIT_USER=smallbun-website-circleci yarn run publish-gh-pages
 
 
