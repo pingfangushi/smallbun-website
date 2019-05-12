@@ -36,9 +36,9 @@ workflows:
       - deploy-website:
           filters: *filter-only-master
 
-      build:
-        machine: true
-        branches:
-          ignore: gh-pages
-        steps:
-          -run: echo "Skipping tests on gh-pages branch"
+      - build:
+          machine: true
+          branches:
+            ignore: gh-pages
+          steps:
+            - run: echo "Skipping tests on gh-pages branch"
