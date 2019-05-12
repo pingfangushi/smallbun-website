@@ -23,9 +23,9 @@ jobs:
           name: 部署到GitHub页面
           command: |
             git config --global user.email "2504919830@qq.com"
-            git config --global user.name "smallbun-website-circleci"
-            echo "machine github.com login  password $GITHUB_TOKEN" > ~/.netrc
-            cd website && yarn install && GIT_USER=smallbun-website-circleci yarn run publish-gh-pages
+            git config --global user.name "SanLi"
+            echo "machine github.com login pingfangsuhi  password $GITHUB_TOKEN" > ~/.netrc
+            cd website && yarn install && GIT_USER=pingfangsuhi yarn run publish-gh-pages
 
 
 workflows:
