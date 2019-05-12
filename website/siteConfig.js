@@ -35,7 +35,7 @@ const siteConfig = {
     // 用于发布等
     projectName: 'smallbun-website',
     organizationName: 'pingfangushi',
-    cname: 'pingfangsuhi.com',
+    cname: 'pingfangushi.com',
 
 
     // 对于顶部导航栏中没有标题链接 - > headerLinks：[]，
