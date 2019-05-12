@@ -1,0 +1,35 @@
+# 如果您只想让圆圈在直接提交中运行，您可以取消注释
+# 并取消注释过滤器：* filter-only-master也在下面
+#
+# aliases:
+#  - &filter-only-master
+#    branches:
+#      only:
+#        - master
+
+version: 2
+jobs:
+  deploy-website:
+    docker:
+      # 在此处指定所需的版本
+
+      - image: circleci/node:8.11.1
+
+    steps:
+
+      - checkout
+      - run:
+          name: 部署到GitHub页面
+          command: |
+            git config --global user.email "268917096@qq.com"
+            git config --global user.name "SanLi"
+            echo "machine github.com login <GITHUB_USERNAME> password $GITHUB_TOKEN" > ~/.netrc
+            cd website && yarn install && GIT_USER=<GIT_USER> yarn run publish-gh-pages
+
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+
+      - deploy-website:
+#         filters: *filter-only-master
