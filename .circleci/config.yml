@@ -7,9 +7,6 @@ aliases:
       only:
         - master
 
-
-
-
 version: 2
 jobs:
   deploy-website:
@@ -28,7 +25,6 @@ jobs:
             git config --global user.name "SanLi"
             echo "machine github.com login pingfangsuhi  password $GITHUB_TOKEN" > ~/.netrc
             cd website && yarn install && GIT_USER=pingfangsuhi CUSTOM_COMMIT_MESSAGE="[skip ci]"  yarn run publish-gh-pages
-
 
 workflows:
   version: 2
