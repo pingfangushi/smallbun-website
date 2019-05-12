@@ -27,14 +27,7 @@ jobs:
             git config --global user.email "2504919830@qq.com"
             git config --global user.name "SanLi"
             echo "machine github.com login pingfangsuhi  password $GITHUB_TOKEN" > ~/.netrc
-            cd website && yarn install && GIT_USER=pingfangsuhi yarn run publish-gh-pages
-  build:
-    machine: true
-    branches:
-      ignore: gh-pages
-    steps:
-      - run: echo "Skipping tests on gh-pages branch"
-
+            cd website && yarn install && GIT_USER=pingfangsuhi CUSTOM_COMMIT_MESSAGE="[skip ci]"  yarn run publish-gh-pages
 
 
 workflows:
