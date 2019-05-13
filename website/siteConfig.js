@@ -44,7 +44,7 @@ const siteConfig = {
         {href: "http://118.25.232.156:9090/login", label: "在线演示"},
         {doc: "技术支持", label: "技术支持"},
         {blog: true, label: "更新日志"},
-        {href: "https://github.com/leshalv/smallbun", label: "GitHub"},
+        {href: "https://github.com/pingfangushi/smallbun", label: "GitHub"},
         {search: true},
     ],
 
