@@ -14,7 +14,7 @@ const users = [
         caption: 'User1',
         // 您需要在baseUrl前面添加图像路径
         // 如果它不是'/'，例如：'/ test-site/img/image.jpg'。
-        image: '/img/undraw_open_source.svg',
+        image: '/img/smallbun.ico',
         infoLink: 'https://www.facebook.com',
         pinned: true,
     },
@@ -50,11 +50,11 @@ const siteConfig = {
 
     // 如果您在上面设置了用户，请在此处添加：
     users,
-
+    disableHeaderTitle: true,
     /* 页眉/页脚的图像路径 */
-    /*headerIcon: 'img/favicon.ico',*/
-    /*footerIcon: 'img/favicon.ico',*/
-    /*favicon: 'img/favicon.ico',*/
+    headerIcon: 'img/smallbun.ico',
+    footerIcon: 'img/smallbun_footer.ico',
+    favicon: 'img/smallbun_footer.ico',
 
     /* 网站的颜色 */
     colors: {
